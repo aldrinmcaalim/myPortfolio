@@ -14,11 +14,18 @@ button.addEventListener('click', () => {
 
 const items = document.querySelectorAll('li');
 
-items.forEach(item => {
-    item.addEventListener('click', e => {
-        //console.log('item clicked');
-        // console.log(e.target);
-        // e.target.style.textDecoration = 'line-through';
+
+// items.forEach(item => {
+//     item.addEventListener('click', e => {
+//         //console.log('item clicked');
+//         // console.log(e.target);
+//         // e.target.style.textDecoration = 'line-through';
+//         e.target.remove();
+//     });
+// });
+
+ul.addEventListener('click', e => {
+    if (e.target.tagName === "LI") {
         e.target.remove();
-    });
+    }
 });
