@@ -1,42 +1,18 @@
-// const content = document.querySelector("p");
+const article = document.querySelector('article');
 
-// console.log(content.classList);
-// content.classList.add('error');
-// content.classList.remove('error');
-// content.classList.add('success');
+// console.log(article.children);
 
-const paragraphs = document.querySelectorAll("p");
+// console.log(Array.from(article.children));
 
-paragraphs.forEach(paragraph => {
-    if (paragraph.textContent.includes("error")) {
-        paragraph.classList.add('error');
-    }
-    if (paragraph.textContent.includes('success')) {
-        paragraph.classList.add('success');
-    }
-});
+// Array.from(article.children).forEach(child => {
+//     child.classList.add('article-element');
+// });
 
-const title = document.querySelector('.title');
+const title = document.querySelector('h2');
 
-title.classList.toggle('test');
+console.log(title.parentElement.parentElement);
+console.log(title.nextElementSibling);
+console.log(title.previousElementSibling);
 
-
-
-// paragraphs[0].classList.add('error');
-// paragraphs[1].classList.add('success');
-// paragraphs[3].classList.add('success');
-// paragraphs[4].classList.add('error');
-// paragraphs[6].classList.add('error');
-// paragraphs[7].classList.add('success');
-
-const listItems = document.querySelectorAll('li');
-
-listItems.forEach(listItem => {
-    if (listItem.textContent.includes('red')) {
-        listItem.classList.add('red');
-    } else if (listItem.textContent.includes('black')) {
-        listItem.classList.add('black');
-    } else if (listItem.textContent.includes('blue')) {
-        listItem.classList.add('blue');
-    }
-});
+// chaining
+console.log(title.nextElementSibling.parentElement.children);
